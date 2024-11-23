@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Page Flip with Central Audio Icon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .magazine {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .magazine div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: inline-block;
+        position: relative;
+      }
+
+      .audio-icon {
+        position: absolute;
+        left: 80%;
+        top: 3.5%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        cursor:pointer;
+        font-size: 30px;
+        color: white;
+        border-radius: 50%;
+        padding: 15px;
+      }
+
+      /* .audio-icon:hover {
+        background: rgba(0, 0, 0, 0.7);
+      } */
+    </style>
+  </head>
+  <div>
+    <div class="magazine">
+      <div class="page" style="background: url(images/assia_page-0001.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(1)">🔊</i>
+        <audio id="audio-1" src="audio/page1-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0002.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(2)">🔊</i>
+        <audio id="audio-2" src="audio/page2-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0003.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(3)">🔊</i>
+        <audio id="audio-3" src="audio/page3-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0004.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(4)">🔊</i>
+        <audio id="audio-4" src="audio/page4-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0005.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(5)">🔊</i>
+        <audio id="audio-5" src="audio/page5-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0006.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(6)">🔊</i>
+        <audio id="audio-6" src="audio/page6-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0007.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(7)">🔊</i>
+        <audio id="audio-7" src="audio/page7-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0008.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(8)">🔊</i>
+        <audio id="audio-8" src="audio/page8-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0009.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(9)">🔊</i>
+        <audio id="audio-9" src="audio/page9-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0010.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(10)">🔊</i>
+        <audio id="audio-10" src="audio/page10-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0011.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(11)">🔊</i>
+        <audio id="audio-11" src="audio/page11-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0012.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(12)">🔊</i>
+        <audio id="audio-12" src="audio/page12-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0013.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(13)">🔊</i>
+        <audio id="audio-13" src="audio/page13-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0014.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(14)">🔊</i>
+        <audio id="audio-14" src="audio/page14-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0015.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(15)">🔊</i>
+        <audio id="audio-15" src="audio/page15-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0016.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(16)">🔊</i>
+        <audio id="audio-16" src="audio/page16-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0017.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(17)">🔊</i>
+        <audio id="audio-17" src="audio/page17-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0018.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(18)">🔊</i>
+        <audio id="audio-18" src="audio/page18-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0019.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(19)">🔊</i>
+        <audio id="audio-19" src="audio/page19-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0020.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(20)">🔊</i>
+        <audio id="audio-20" src="audio/page20-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0021.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(21)">🔊</i>
+        <audio id="audio-21" src="audio/page21-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0022.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(22)">🔊</i>
+        <audio id="audio-22" src="audio/page22-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0023.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(23)">🔊</i>
+        <audio id="audio-23" src="audio/page23-audio.mp3" preload="none"></audio>
+      </div>
+      <div class="page" style="background: url(images/assia_page-0024.jpg); background-size: 100% 100%;">
+        <i class="audio-icon" id="audio-icon" onclick="toggleAudio(24)">🔊</i>
+        <audio id="audio-24" src="audio/page24-audio.mp3" preload="none"></audio>
+      </div>    
+    <div class="page" style="background: url(images/assia_page-0025.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(25)">🔊</i>
+      <audio id="audio-25" src="audio/page25-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0026.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(26)">🔊</i>
+      <audio id="audio-26" src="audio/page26-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0027.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(27)">🔊</i>
+      <audio id="audio-27" src="audio/page27-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0028.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(28)">🔊</i>
+      <audio id="audio-28" src="audio/page28-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0029.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(29)">🔊</i>
+      <audio id="audio-29" src="audio/page29-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0030.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(30)">🔊</i>
+      <audio id="audio-30" src="audio/page30-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0031.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(31)">🔊</i>
+      <audio id="audio-31" src="audio/page31-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0032.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(32)">🔊</i>
+      <audio id="audio-32" src="audio/page32-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0033.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(33)">🔊</i>
+      <audio id="audio-33" src="audio/page33-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0034.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(34)">🔊</i>
+      <audio id="audio-34" src="audio/page34-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0035.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(35)">🔊</i>
+      <audio id="audio-35" src="audio/page35-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0036.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(36)">🔊</i>
+      <audio id="audio-36" src="audio/page36-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0037.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(37)">🔊</i>
+      <audio id="audio-37" src="audio/page37-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0038.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(38)">🔊</i>
+      <audio id="audio-38" src="audio/page38-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0039.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(39)">🔊</i>
+      <audio id="audio-39" src="audio/page39-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0040.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(40)">🔊</i>
+      <audio id="audio-40" src="audio/page40-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0041.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(41)">🔊</i>
+      <audio id="audio-41" src="audio/page41-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0042.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(42)">🔊</i>
+      <audio id="audio-42" src="audio/page42-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0043.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(43)">🔊</i>
+      <audio id="audio-43" src="audio/page43-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0044.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(44)">🔊</i>
+      <audio id="audio-44" src="audio/page44-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0045.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(45)">🔊</i>
+      <audio id="audio-45" src="audio/page45-audio.mp3" preload="none"></audio>
+    </div>
+  
+    <div class="page" style="background: url(images/assia_page-0046.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(46)">🔊</i>
+      <audio id="audio-46" src="audio/page46-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0047.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(47)">🔊</i>
+      <audio id="audio-47" src="audio/page47-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0048.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(48)">🔊</i>
+      <audio id="audio-48" src="audio/page48-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0049.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(49)">🔊</i>
+      <audio id="audio-49" src="audio/page49-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0050.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(50)">🔊</i>
+      <audio id="audio-50" src="audio/page50-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0051.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(51)">🔊</i>
+      <audio id="audio-51" src="audio/page51-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0052.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(52)">🔊</i>
+      <audio id="audio-52" src="audio/page52-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0053.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(53)">🔊</i>
+      <audio id="audio-53" src="audio/page53-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0054.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(54)">🔊</i>
+      <audio id="audio-54" src="audio/page54-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0055.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(55)">🔊</i>
+      <audio id="audio-55" src="audio/page55-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0056.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(56)">🔊</i>
+      <audio id="audio-56" src="audio/page56-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0057.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(57)">🔊</i>
+      <audio id="audio-57" src="audio/page57-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0058.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(58)">🔊</i>
+      <audio id="audio-58" src="audio/page58-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0059.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(59)">🔊</i>
+      <audio id="audio-59" src="audio/page59-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0060.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(60)">🔊</i>
+      <audio id="audio-60" src="audio/page60-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0061.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(61)">🔊</i>
+      <audio id="audio-61" src="audio/page61-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0062.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(62)">🔊</i>
+      <audio id="audio-62" src="audio/page62-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0063.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(63)">🔊</i>
+      <audio id="audio-63" src="audio/page63-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0064.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(64)">🔊</i>
+      <audio id="audio-64" src="audio/page64-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0065.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(65)">🔊</i>
+      <audio id="audio-65" src="audio/page65-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0066.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(66)">🔊</i>
+      <audio id="audio-66" src="audio/page66-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0067.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(67)">🔊</i>
+      <audio id="audio-67" src="audio/page67-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0068.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(68)">🔊</i>
+      <audio id="audio-68" src="audio/page68-audio.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0069.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(69)">🔊</i>
+      <audio id="audio-69" src="audio/page69-audio.mp3" preload="none"></audio>
+    </div>
+   <div class="page" style="background: url(images/assia_page-0070.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(70)">🔊</i>
+  <audio id="audio-70" src="audio/page70-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0071.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(71)">🔊</i>
+  <audio id="audio-71" src="audio/page71-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0072.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(72)">🔊</i>
+  <audio id="audio-72" src="audio/page72-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0073.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(73)">🔊</i>
+  <audio id="audio-73" src="audio/page73-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0074.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(74)">🔊</i>
+  <audio id="audio-74" src="audio/page74-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0075.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(75)">🔊</i>
+  <audio id="audio-75" src="audio/page75-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0076.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(76)">🔊</i>
+  <audio id="audio-76" src="audio/page76-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0077.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(77)">🔊</i>
+  <audio id="audio-77" src="audio/page77-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0078.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(78)">🔊</i>
+  <audio id="audio-78" src="audio/page78-audio.mp3" preload="none"></audio>
+</div>
+<div class="page" style="background: url(images/assia_page-0079.jpg); background-size: 100% 100%;">
+  <i class="audio-icon" id="audio-icon" onclick="toggleAudio(79)">🔊</i>
+  <audio id="audio-79" src="audio/page79-audio.mp3" preload="none"></audio>
+</div>
+</div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/turn.js"></script>
+    <audio id="page-turn-sound" src="audio/page-turn.mp3" preload="none"></audio>
+
+    <script>
+      // Initialize the page flip effect
+      $('.magazine').turn({
+        gradients: true,
+        acceleration: true
+      });
+
+      // Keep track of the currently playing audio
+      let currentAudio = null;
+
+      // Function to play or pause the audio on the page
+      function toggleAudio(pageNumber) {
+        const audio = document.getElementById('audio-' + pageNumber);
+        const icon = document.getElementById('audio-icon');
+        
+        // Pause currently playing audio if it's not the current page
+        if (currentAudio && currentAudio !== audio) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0; // Reset audio
+        }
+
+        if (audio.paused) {
+          audio.play();
+          // icon.textContent = '⏸️'; // Change icon to "Pause"
+          currentAudio = audio; // Set the current audio
+        } else {
+          audio.pause();
+          icon.textContent = '🔊'; // Change icon back to "Play"
+          currentAudio = null; // Clear the current audio
+        }
+      }
+
+      // Play the page-turn sound every time a page is flipped
+      $('.magazine').on('turn', function(event, page, view) {
+        var audio = document.getElementById('page-turn-sound');
+        audio.play(); // Play the sound
+      });
+    </script>
+
+  </body>
+</html>
